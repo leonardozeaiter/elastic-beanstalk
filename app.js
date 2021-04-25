@@ -9,7 +9,7 @@ const Note = require('./Note')
 app.get('/', async (req, res) => {
     await connectToDatabase()
 
-    await Note.insertOne({ title: "t1", description: "d1" });
+    await Note.insert({ title: "t1", description: "d1" });
 
     // const notes = await Note.find({}, (err, data) => {
     //     if (err)
