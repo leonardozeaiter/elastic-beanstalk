@@ -15,7 +15,8 @@ app.get('/', async (req, res) => {
     })
 
     const notes = await Note.find({}, (err, data) => {
-        //console.log("ERR: ", err);
+        if (err)
+            console.log("ERR: ", err);
         //console.log("DATA: ", data)
     });
 
