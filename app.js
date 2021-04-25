@@ -9,7 +9,7 @@ const Note = require('./Note')
 app.get('/', async (req, res) => {
     await connectToDatabase()
 
-    await Note.insertMany([{ title: "t", description: "d" }]);
+    //await Note.insertMany([{ title: "t", description: "d" }]);
 
     const notes = await Note.find({}, (err, data) => {
         if (err)
