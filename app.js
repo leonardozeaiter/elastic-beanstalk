@@ -9,10 +9,10 @@ const Note = require('./Note')
 app.get('/', async (req, res) => {
     await connectToDatabase()
 
-    await Note.insertMany([{ title: "t", description: "d" }], (err, data) => {
-        console.log("ERR: ", err);
-        console.log("DATA: ", data)
-    })
+    // await Note.insertMany([{ title: "t", description: "d" }], (err, data) => {
+    //     console.log("ERR: ", err);
+    //     console.log("DATA: ", data)
+    // })
 
     const notes = await Note.find({}, (err, data) => {
         if (err)
