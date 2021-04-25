@@ -17,7 +17,7 @@ app.get('/', async (req, res) => {
     const notes = await Note.find({}, (err, data) => {
         if (err)
             console.log("ERR: ", err);
-        //console.log("DATA: ", data)
+        console.log("DATA: ")
     });
 
 
@@ -26,6 +26,6 @@ app.get('/', async (req, res) => {
 
 //Test
 http.createServer(app).listen(process.env.PORT || 8000, () => {
-    console.log(process.env.DB)
+    //console.log(process.env.DB)
     console.log("APP IS listening...");
 })
