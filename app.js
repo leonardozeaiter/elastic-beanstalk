@@ -21,7 +21,7 @@ app.get('/', async (req, res) => {
     });
 
 
-    res.send({ v: 1, notes })
+    res.send({ v: 1, notes, now: new Date() })
 })
 
 //Test
