@@ -8,13 +8,15 @@ const Note = require('./Note')
 
 app.get('/', async (req, res) => {
     console.log("REQUEST to / DONE")
-    res.sendStatus(200)
-    // await connectToDatabase()
 
-    // var note1 = new Note({ title: "t1", description: "d1" });
+    await connectToDatabase()
 
-    // await note1.save();
+    var note1 = new Note({ title: "t1", description: "d1" });
 
+    await note1.save();
+
+    res.sendStatus(200);
+    //res.send({ v: 1, notes, now: new Date() });
 
     // const notes = await Note.find({}, (err, data) => {
     //     if (err)
