@@ -27,7 +27,7 @@ app.get('/', async (req, res) => {
 })
 
 //Test
-http.createServer(app).listen(process.env.PORT || 3000, () => {
+http.createServer(app).listen(process.env.PORT || 80, () => {
     //console.log(process.env.DB)
     console.log("APP IS listening...");
 })
