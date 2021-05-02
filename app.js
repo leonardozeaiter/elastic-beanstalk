@@ -7,7 +7,7 @@ const connectToDatabase = require('./db')
 const Note = require('./Note')
 
 app.get('/', async (req, res) => {
-    console.log("REQUEST to / DONE")
+    console.log("REQUEST to / DONE", process.env.USERNAME)
 
     await connectToDatabase()
 
